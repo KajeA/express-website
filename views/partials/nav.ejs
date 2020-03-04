@@ -1,7 +1,8 @@
 <section class="nav">
   <ul>
-    <li><a href="/">Home</a></li>
-    <li><a href="/cheeseburger">Coffee</a></li>
-    <li><a href="/cupcake">Cupcake</a></li>
-    <li><a href="/bacon">Bacon</a></li>
+    <li <% if (name === 'home') { %>class="current" <% } %> ><a href="/">Home</a></li>
+    <li <% if (name === 'cheeseburger') { %>class="current" <% } %> ><a href="/cheeseburger">Coffee</a></li>
+    <li <% if (name === 'cupcake') { %>class="current" <% } %> ><a href="/cupcake">Cupcake</a></li>
+    <li <% if (name === 'bacon') { %>class="current" <% } %> ><a href="/bacon">Bacon</a></li>
   </ul>
+</section>

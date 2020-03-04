@@ -4,7 +4,12 @@ const ejs = require("ejs");
 const pageInfo = require("./pageInfo")
 const app = express();
 const moment = require('moment');
+const dateyear = "YYYY"
 
+
+
+app.locals.moment = require('moment');
+app.locals.dateyear = dateyear
 
 app.set('view engine', 'ejs');
 
@@ -23,7 +28,6 @@ app.get('/cheeseburger',function(req, res) {
 app.get('/cupcake',function(req, res) {
   res.render('cupcake', pageInfo.cupcake)
 })
-
 
 app.use(express.static(path.join(__dirname, 'public')));
 
