@@ -1,2 +1,5 @@
 # express-website
-Simple website using express and node.js on the backend
+
+Static Food-based Impsum web app focusing on express, ejs and node.js backend and deployment through Heroku
+
+[Live Site](https://food-ipsum.herokuapp.com/)
