@@ -1,0 +1,13 @@
+<% 
+    for (img of pics)  { 
+        if (img.id == photoid){ %>
+<figure class="large-figure"><img src="../images/lrg/<%= img.fileName %>" alt="<%= img.title %>" class="large">
+  <figcaption class="large-caption"><a href="<%= img.attribution.url %>"
+      class="author-link"><%= img.attribution.credit %></a>
+    <p><%= img.attribution.source %></p>
+  </figcaption>
+</figure>
+<% }
+        }
+    %>
+

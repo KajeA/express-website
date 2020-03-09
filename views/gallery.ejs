@@ -1,0 +1,24 @@
+<%- include('partials/head') %>
+<%- include('partials/nav') %>
+<%- include('partials/header') %>
+
+
+<section class="pictures">
+
+
+  <% for (img of pics) { %>
+    <figure class = "individual"><a href="../images/lrg/<%= img.fileName %>"><img src="images/sm/<%= img.fileName %>"
+      alt="<%= img.title %>"></a>
+      <figcaption><h1><%= img.title %></h1>
+      <h2><%= img.attribution.credit %></h2>
+  </figcaption></figure>
+<% } %>
+</section>
+
+
+
+
+
+
+
+<%- include('partials/footer') %>

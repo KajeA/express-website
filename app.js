@@ -5,11 +5,12 @@ const pageInfo = require("./pageInfo")
 const app = express();
 const moment = require('moment');
 const dateyear = "YYYY"
-
+const pics = require("./pics");
 
 
 app.locals.moment = require('moment');
 app.locals.dateyear = dateyear
+app.locals.pics = pics
 
 app.set('view engine', 'ejs');
 
@@ -28,6 +29,16 @@ app.get('/cheeseburger',function(req, res) {
 app.get('/cupcake',function(req, res) {
   res.render('cupcake', pageInfo.cupcake)
 })
+
+app.get('/gallery',function(req, res) {
+  res.render('gallery', pageInfo.gallery)
+})
+
+app.get('/gallery/:id', function (req, res) {
+  app.locals.photoid = req.params.id;
+  res.render('large', {});
+});
+
 
 app.use(express.static(path.join(__dirname, 'public')));
 

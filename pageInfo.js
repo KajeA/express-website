@@ -18,7 +18,19 @@ const pageInfo = {
     name: "cupcake",
     title: 'Cupcake Ipsum',
     description: 'Sweet',
+  },
+  gallery: {
+    name: "gallery",
+    title: 'Gallery',
+    description: 'Smooth',
+  },
+  large: {
+    name: "large",
+    title: 'Large',
+    description: 'Silky',
   }
 }
+
+
 
 module.exports = pageInfo;
